@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let contact of contacts | async; index as i; count as c;">
+    <contact-card
+      [contact]="contact"
+      [collectionLength]="c"
+      (update)="onUpdate($event, i)">
+    </contact-card>
+  </li>
+</ul>
